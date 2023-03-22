@@ -32,49 +32,57 @@ class WelcomeScreen extends StatelessWidget {
                Container(
                       height: 50.0,
                       width: MediaQuery.of(context).size.width/1.1,
-                      child: FlatButton(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(35.0),
-                        ),
-                        onPressed: () {
+                      child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          primary: Color(0xFFFF7966),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(35.0),
+                          )),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Get Started",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      ),
+                     onPressed: () {
                           Navigator.push(context,
 MaterialPageRoute(builder: (context) => Register1())
       );
                         },
-                         
-                        
-                        color: Color(0xFFFF7966),
-                        textColor: Colors.white,
-                        child: Text(
-                          "Get started",
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            height: 1.2,
-                          ),
-                        ),
-                      ),
+                    ),
                     ),
                     SizedBox(height: 10,),
                     Container(
                       height: 50.0,
                       width: MediaQuery.of(context).size.width/1.1,
-                      child: FlatButton(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(35.0),
-                        ),
-                        onPressed: () {},
-                         
-                        
-                        color: Color(0xFFFFFFF),
-                        textColor: Colors.white,
-                        child: Text(
-                          "I have an account",
-                          style: TextStyle(
-                            fontSize: 14.0,
-                            height: 1.2,
-                          ),
-                        ),
+                      child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          primary: Color(0xFFFF7966),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(35.0),
+                          )),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "I have an account",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
                       ),
+                      onPressed: () {
+                       
+                      },
+                    ),
                     )
           ],
         ),
@@ -82,3 +90,5 @@ MaterialPageRoute(builder: (context) => Register1())
     );
   }
 }
+
+
